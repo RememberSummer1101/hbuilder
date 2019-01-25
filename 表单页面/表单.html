@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<form action="" method="post">
+			姓名：<input name="username" value="qwy"><br>
+			密码：<input type="password" name="password" value="123"><br />
+			性别：<input type="radio" name="sex" value="1" checked="checked"> 男
+			<input type="radio" name="sex" value="0"> 女
+			<br />
+			爱好：<input type="checkbox" name="hobby" value="eat" checked="checked">吃
+			<input type="checkbox" name="hobby" value="drink" checked="checked">喝
+			<input type="checkbox" name="hobby" value="sleep">睡
+			<br />
+			头像：<input type="file" name="photo">
+			<br />
+			籍贯：<select name="pro">
+				
+				<option value="01" selected="selected">北京</option>
+				<option value="02">上海</option>
+				<option value="03">广州</option>
+			</select>
+			<select name="city">
+				<option>--请选择--</option>
+				<option value="0101">昌平</option>
+				<option value="0102">海淀</option>
+				<option value="0103">朝阳</option>
+			</select>
+			<br />
+			自我介绍：<textarea name="intr" cols="40" rows="4"></textarea>
+				<br />
+				<input type="submit" value="保存" />
+				<input type="reset" />
+				<input type="button" value="普通按钮" />
+		</form>
+	</body>
+
+</html>
+<!--
+   表单：
+   常用的子标签
+   input
+   select下拉框
+   textarea:文本域
+   
+   inpu标签
+   常用的属性
+   type： text 文本框默认
+   password 密码框
+   radio 单选框
+   checkbox 多选框
+   file 文件框
+   name： 
+   可以将几个单选框设置为一组
+   要想信息保存到服务器上必须要name属性
+   
+   
+   提交到服务器的内容的格式
+   key=value
+   对于文本框，密码框内容传递过去了
+   单选框和多选框来说，却没有传递过去
+   要想把值传递过去，必须设置valus属性
+   
+   
+   get和post的区别
+   1 gei请求会把所有的参数追加到地址栏上，post请求不会
+   2.get请求参数大小有限制，post没有限制
+   3.post相对于get安全一些
+-->
