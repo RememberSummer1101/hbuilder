@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		<script type="text/javascript"></script>
+		<script type="text/javascript">
+			function btnCli() {
+				var obj = document.getElementById("divid0");
+				obj.style.backgroundColor = "chartreuse";
+				obj.style.border = "1px solid red";
+				obj.style.width = "100px";
+				obj.style.height = "100px";
+			}
+		</script>
 	</head>
+
 	<body>
+		<input type="button" value="将div加上样式" onclick="btnCli()" />
+		<div id="divid0"></div>
+
 	</body>
+
 </html>

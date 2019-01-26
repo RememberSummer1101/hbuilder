@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title></title>
@@ -7,99 +8,93 @@
 			a {
 				text-decoration: none;
 			}
-
 			.header {
 				width: 100%;
 			}
-
 			.header div {
 				float: left;
 				width: 33.33%;
 				height: 60px;
 				line-height: 50px;
 			}
-
 			.header a {
 				padding: 15px;
 			}
-
 			/*caidanbufen */
+			
 			.menu {
 				width: 100%;
 				background-color: black;
 				height: 50px;
 				padding-top: 1px;
 			}
-
 			.cle {
 				clear: both;
 			}
-
 			.menu ul li {
 				list-style-type: none;
 				display: inline;
 			}
-
 			.menu a {
 				font-size: 25px;
 				color: white;
 				padding: 10px;
 			}
-
 			.lunbo {
 				width: 100%;
 				margin-top: 10px;
 				margin-bottom: 10px;
 			}
-
 			.lunbo img {
 				width: 100%;
 			}
-
 			/*热门商品*/
 			/* 	.left, .right{
 				float: left;
 			} */
+			
 			.left {
 				float: left;
 				width: 16%;
 				height: 500px;
 			}
-
 			.right {
 				float: left;
 				width: 84%;
 				text-align: center;
 				height: 500px;
 			}
-
 			.middle {
 				float: left;
 				width: 50%;
 				height: 250;
 			}
-
 			.item {
 				float: left;
 				width: 16.66%;
 				height: 250px;
 			}
 			/* 广告 */
-			.ad1{
-				width: 100% ;
-			}
-			.ad1 img{
+			
+			.ad1 {
 				width: 100%;
 			}
-			.foot{
+			.ad1 img {
 				width: 100%;
 			}
-			.foot p{
+			.foot {
+				width: 100%;
+			}
+			.foot p {
 				text-align: center;
 			}
 		</style>
 	</head>
+
 	<body>
+		<div id="ad" style="width: 100%;display: none;">
+			<img src="img/ad_.jpg" width="100%" />
+		</div>
 		<div>
 			<!--logo-->
 			<div class="header">
@@ -215,4 +210,31 @@
 
 		</div>
 	</body>
+	<script>
+		 //记录广告的展示次数
+		var i = 0;
+		 //定时器id
+		var timer;
+		onload = function() {
+				//间隔十秒展示图片
+				timer = setInterval(showAd, 4000);
+			}
+			//展示广告方法,两秒之后隐藏
+
+		function showAd() {
+			i++;
+			if (i == 3) {
+				clearInterval(timer);
+			}
+			var divobj = document.getElementById("ad");
+			divobj.style.display = "block";
+			setTimeout(hideAd, 2000);
+		}
+
+		function hideAd() {
+			var divobj = document.getElementById("ad");
+			divobj.style.display = "none";
+		}
+	</script>
+
 </html>
